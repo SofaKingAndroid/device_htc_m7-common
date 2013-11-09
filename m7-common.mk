@@ -19,6 +19,7 @@ $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/ska/overlay/m7
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920

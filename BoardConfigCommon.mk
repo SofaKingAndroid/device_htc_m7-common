@@ -39,7 +39,6 @@ TARGET_KERNEL_SOURCE := kernel/htc/m7
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNEW_ION_API=1
-COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true  # use DMIC in call only
@@ -133,7 +132,7 @@ BOARD_SEPOLICY_UNION := \
 ifneq ($(filter m7att m7tmo m7ul,$(TARGET_DEVICE)),)
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom.gsm
 else
-TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom.cdma
+TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom.spr
 endif
 BOARD_CUSTOM_GRAPHICS := ../../../device/htc/m7-common/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
